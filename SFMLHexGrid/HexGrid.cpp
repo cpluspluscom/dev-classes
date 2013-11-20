@@ -1,5 +1,13 @@
 #include "HexGrid.hpp"
 
+HexGrid::HexGrid() : defHeight(0),
+defWidth(0),
+defRadius(0),
+defColor(0,0,0,0),
+hexNumber(0),
+yRow(1)
+{}
+
 HexGrid::HexGrid(int height, int width, float radius, sf::Color color){
 
 	defHeight = height;
@@ -26,11 +34,7 @@ void HexGrid::draw(sf::RenderWindow &App){
 
 	for(int i = 1; i <= hexNumber; ++i){
 		
-
 		hexagon.setPosition(xPos, yPos);
-		hexBounds = hexagon.getLocalBounds();
-
-
 
 		if( i % defWidth == 0 && i != 0 ){
 			if (yRow % 2 == 0){
@@ -52,4 +56,38 @@ void HexGrid::draw(sf::RenderWindow &App){
 
 	}
 
+}
+
+void HexGrid::setHeight(int height){
+	defHeight = height;
+	hexNumber = defHeight * defWidth;
+}
+
+int HexGrid::getHeight(){
+	return defHeight;
+}
+
+void HexGrid::setWidth(int width){
+	defWidth = width;
+	hexNumber = defHeight * defWidth;
+}
+
+int HexGrid::getWidth(){
+	return defWidth;
+}
+
+void HexGrid::setRadius(float radius){
+	defRadius = radius;
+}
+
+float HexGrid::getRadius(){
+	return defRadius;
+}
+
+void HexGrid::setColor(sf::Color color){
+	defColor = color;
+}
+
+sf::Color HexGrid::getColor(){
+	return defColor;
 }
