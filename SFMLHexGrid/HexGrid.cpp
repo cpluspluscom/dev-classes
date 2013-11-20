@@ -16,8 +16,6 @@ HexGrid::HexGrid(int height, int width, float radius, sf::Color color){
 	defColor = color;
 	hexNumber = width * height;
 	yRow = 1;
-	xKeyPos = 0;
-	yKeyPos = 0;
 
 }
 
