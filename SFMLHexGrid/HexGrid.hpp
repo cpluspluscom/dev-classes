@@ -14,11 +14,11 @@ public:
 private:
 
 	sf::CircleShape hexagon;
-    sf::Color defColor;
-    sf::FloatRect hexBounds;
-    sf::Event event;
+	sf::Color defColor;
+	sf::FloatRect hexBounds;
+	sf::Event event;
 	int defHeight;
-    int defWidth;
+	int defWidth;
 	int hexNumber;
 	int yRow;
 	float defRadius;
