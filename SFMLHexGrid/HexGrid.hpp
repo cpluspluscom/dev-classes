@@ -10,6 +10,7 @@ public:
 
 	HexGrid();
 	HexGrid(int height, int width, float radius, sf::Color color);
+	HexGrid(const HexGrid &grid);
 	void draw(sf::RenderWindow &App);
 	void setHeight(int height);
 	int getHeight();
