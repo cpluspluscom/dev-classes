@@ -16,7 +16,15 @@ HexGrid::HexGrid(int height, int width, float radius, sf::Color color){
 	defColor = color;
 	hexNumber = width * height;
 	yRow = 1;
+}
 
+HexGrid::HexGrid(const HexGrid &grid){
+	defHeight = grid.getHeight();
+	defWidth = grid.getWidth();
+	defRadius = grid.getRadius();
+	defColor = grid.getColor();
+	hexNumber = defWidth * defHeight;
+	yRow = 1;
 }
 
 void HexGrid::draw(sf::RenderWindow &App){
